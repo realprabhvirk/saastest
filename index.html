@@ -65,6 +65,17 @@
     max-width: 600px;
     margin: 0 auto 2rem;
   }
+  .delivery-note {
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .menu-card .delivery-note {
+    font-size: 0.8rem;
+    color: var(--red);
+    margin-top: 0.4rem;
+  }
   .btn {
     display: inline-block;
     background: var(--red);
@@ -202,46 +213,54 @@
   <h1>Hot, Fresh, Handmade Pizza</h1>
   <p>Stone-baked in Slice House's wood-fired oven and delivered to your door in 30 minutes or less. This is a demo site — no real orders are placed.</p>
   <a href="#contact" class="btn">Order Now</a>
+  <p class="delivery-note">🚚 $2.99 delivery fee applies to all orders.</p>
 </section>
 
 <section id="menu">
   <h2>Our Menu</h2>
+  <p style="text-align:center; margin-top:-1.8rem; margin-bottom:2rem; color:#555;">🚚 $2.99 delivery fee applies to all orders.</p>
   <div class="menu-grid">
     <div class="menu-card">
       <div class="emoji">🍕</div>
       <h3>Margherita</h3>
       <p>San Marzano tomato, fresh mozzarella, basil, olive oil.</p>
       <div class="price">$15.59</div>
+      <div class="delivery-note">+ $2.99 delivery fee</div>
     </div>
     <div class="menu-card">
       <div class="emoji">🥓</div>
       <h3>Pepperoni Classic</h3>
       <p>Double pepperoni, mozzarella, house tomato sauce.</p>
       <div class="price">$17.39</div>
+      <div class="delivery-note">+ $2.99 delivery fee</div>
     </div>
     <div class="menu-card">
       <div class="emoji">🍄</div>
       <h3>Wild Mushroom</h3>
       <p>Cremini & shiitake, truffle oil, thyme, fontina cheese.</p>
       <div class="price">$19.19</div>
+      <div class="delivery-note">+ $2.99 delivery fee</div>
     </div>
     <div class="menu-card">
       <div class="emoji">🌶️</div>
       <h3>Spicy Diavola</h3>
       <p>Spicy salami, chili flakes, red onion, mozzarella.</p>
       <div class="price">$18.59</div>
+      <div class="delivery-note">+ $2.99 delivery fee</div>
     </div>
     <div class="menu-card">
       <div class="emoji">🥦</div>
       <h3>Garden Veggie</h3>
       <p>Bell peppers, olives, onion, spinach, mozzarella.</p>
       <div class="price">$16.79</div>
+      <div class="delivery-note">+ $2.99 delivery fee</div>
     </div>
     <div class="menu-card">
       <div class="emoji">🧀</div>
       <h3>Four Cheese</h3>
       <p>Mozzarella, gorgonzola, parmesan, ricotta.</p>
       <div class="price">$17.99</div>
+      <div class="delivery-note">+ $2.99 delivery fee</div>
     </div>
   </div>
 </section>
@@ -253,6 +272,8 @@
       <p>Slice House has been slinging hand-tossed pizza since 2010. Every pie starts with dough proofed for 48 hours, topped with local ingredients, and baked in a real wood-fired oven until the crust gets that perfect char.</p>
       <br>
       <p>Whether you're grabbing a slice on your lunch break or ordering a full pie for family movie night, we've got you covered — fast, fresh, and always made with love.</p>
+      <br>
+      <p>🚚 <strong>Heads up:</strong> a $2.99 delivery fee applies to all orders.</p>
     </div>
     <div class="box">🔥🍕</div>
   </div>
@@ -268,7 +289,7 @@
     </div>
     <div class="quote-card">
       <div class="stars">★★★★★</div>
-      <p>"Delivery was fast and the pizza arrived piping hot. My new go-to spot."</p>
+      <p>"Delivery was fast and the pizza arrived piping hot. Worth every penny of the $2.99 delivery fee. My new go-to spot."</p>
       <div class="author">— Priya K.</div>
     </div>
     <div class="quote-card">
@@ -288,6 +309,7 @@
       <p>📞 (555) 123-4567</p>
       <p>🕒 Mon–Sun: 11am – 10pm</p>
       <p>✉️ hello@slicehouse.demo</p>
+      <p>🚚 $2.99 delivery fee applies to all orders.</p>
     </div>
     <div class="order-form">
       <form id="orderForm">
@@ -310,6 +332,7 @@
           <label for="address">Delivery Address</label>
           <textarea id="address" rows="2" placeholder="123 Main St..." required></textarea>
         </div>
+        <p class="delivery-note" style="text-align:center;">🚚 $2.99 delivery fee applies to all orders.</p>
         <button type="submit" class="btn">Place Order</button>
         <div id="form-msg"></div>
       </form>
@@ -319,6 +342,7 @@
 
 <footer>
   <p>&copy; 2026 <span class="gold">Slice House Pizza</span> — Demo website, built for showcase purposes only.</p>
+  <p>🚚 A $2.99 delivery fee applies to all orders. Yes, it applies to all orders. All of them.</p>
 </footer>
 
 <script>
@@ -327,7 +351,7 @@
     var name = document.getElementById('name').value.trim();
     var pizza = document.getElementById('pizza').value;
     document.getElementById('form-msg').textContent =
-      'Thanks, ' + name + '! Your "' + pizza + '" order has been received (demo only).';
+      'Thanks, ' + name + '! Your "' + pizza + '" order has been received (demo only). Don\'t forget: a $2.99 delivery fee applies.';
     this.reset();
   });
 </script>
